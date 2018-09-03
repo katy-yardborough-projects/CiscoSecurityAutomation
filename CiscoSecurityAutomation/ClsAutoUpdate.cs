@@ -21,6 +21,7 @@ namespace CiscoSecurityAutomation
                 string updateurl = @"https://raw.githubusercontent.com/katy-yardborough-projects/CiscoSecurityAutomation/master/CiscoSecurityAutomation/update.txt";
                 
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(updateurl);
+                request.UseDefaultCredentials = true;
                 request.AutomaticDecompression = DecompressionMethods.GZip;
                 string updateresponse = "";
                 using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
